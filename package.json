@@ -1,0 +1,24 @@
+{
+  "name": "Parking-design-sdp",
+  "version": "1.0.0",
+  "description": "- Duration to be measured : Entry Time - Exit Time \r - The type of slot: 2/4 wheelers / Large Automobiles\r - Cost of the tickets based on: Flexi*type of vehicle",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YashMunjal/Parking-design-sdp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YashMunjal/Parking-design-sdp/issues"
+  },
+  "homepage": "https://github.com/YashMunjal/Parking-design-sdp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.10"
+  }
+}
