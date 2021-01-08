@@ -5,6 +5,7 @@ const express=require('express');
 class Vehicle {
 
     constructor(number, inTime,outTime,model,spaceEntry) {
+        this._id=
         this.number=number;
         this.inTime=inTime;
         this.outTime=outTime;
