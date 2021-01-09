@@ -1,20 +1,12 @@
 const express=require('express');
-
-
-
-class Vehicle {
-
-    constructor(number, inTime,outTime,model,spaceEntry) {
-        this._id=
-        this.number=number;
-        this.inTime=inTime;
-        this.outTime=outTime;
-        this.model=model;
-        this.spaceEntry=spaceEntry;
-    }
-}
-const Audi=new Vehicle(8305,'12:00','13:00','swift vdi',"4");
-console.log(Audi);
+const mongoose=require('mongoose');
+var mogoUrl = "mongodb://localhost:27017";
+ 
+// A Client to MongoDB
+mongoose.connect('mongodb://localhost:27017/parking-db', {useNewUrlParser: true,useUnifiedTopology: true},()=>{
+    console.log('Mongo connected');
+});
+ 
 
 
 const app = express();
