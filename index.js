@@ -1,6 +1,6 @@
 const express=require('express');
 const mongoose=require('mongoose');
-var mogoUrl = "mongodb://localhost:27017";
+const bodyParser=require('body-parser');
  
 // A Client to MongoDB
 mongoose.connect('mongodb://localhost:27017/parking-db', {useNewUrlParser: true,useUnifiedTopology: true},()=>{
@@ -11,11 +11,17 @@ mongoose.connect('mongodb://localhost:27017/parking-db', {useNewUrlParser: true,
 
 const app = express();
 
-const port=process.env.PORT || 3000;
 
-app.get('/', (req, res) =>{
-    res.send("Welcome to Parking System");
-})
+
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended:false}));
+
+require('./routes-and-calcs/calculations')(app);
+
+
+
+const port=process.env.PORT || 3000;
 
 
 app.listen(port,() => {
